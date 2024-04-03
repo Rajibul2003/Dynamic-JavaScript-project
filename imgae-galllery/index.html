@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image-Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="gallery-wrap">
+    <img src="back.png" alt="" id="prevbtn">
+    <div class="photo-gallery">
+        <div>
+            <span><img src="img-1.jpg" ></span>
+            <span><img src="img-2.jpg" ></span>
+            <span><img src="img-3 jpg" ></span>
+            <span><img src="img-3.jpg" ></span>
+          
+           
+        </div>
+        <div>
+            <span><img src="img-4.jpg" ></span>
+            <span><img src="img-5.jpg" ></span>
+            <span><img src="img-6.jpg" ></span>
+            <span><img src="img-6.jpg" ></span>
+            
+        </div>
+        <div>
+            <span><img src="img-7.jpg" ></span>
+            <span><img src="img-8.jpg" ></span>
+        </div>
+    </div>
+  <img src="next.png" alt="" id="nextbtn">
+</div>
+<script>
+    let scrollimg = document.querySelector(".photo-gallery");
+    let prevbtn = document.getElementById("prevbtn");
+    let nextbtn = document.getElementById("nextbtn");
+
+    scrollimg.addEventListener("wheel",(evt) => {
+        evt.preventDefault();
+        scrollimg.scrollLeft += evt.deltaY;
+        scrollimg.style.scrollbehavior = "auto";
+    });
+    
+    nextbtn.addEventListener("click", ()=>{
+    scrollimg.style.scrollbehavior = "smooth";
+      scrollimg.scrollLeft += 900;  
+    });
+    prevbtn.addEventListener("click", ()=>{
+    scrollimg.style.scrollbehavior = "smooth";
+      scrollimg.scrollLeft -= 900;  
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    background: #FBEAEB;
+}
+
+.photo-gallery{
+    display: flex;
+    width: 900px;
+    overflow-x: scroll;
+}
+.photo-gallery div img{
+   width: 100%;
+   filter: blur(0.5px);
+   transition: transform 0.5s;
+}
+.photo-gallery div{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 20px;
+    padding: 10px;
+    flex: none;
+}
+.photo-gallery::-webkit-scrollbar{
+    display: none;
+}
+.gallery-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10% auto;
+}
+#prevbtn,#nextbtn{
+    width: 50px;
+    cursor: pointer;
+    margin: 40px;
+
+}
+.photo-gallery div img:hover{
+    filter: blur(0);
+  cursor: pointer;
+  transform: scale(1.1);
+}
