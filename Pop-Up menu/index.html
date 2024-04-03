@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POP-UP</title>
+    <link rel="stylesheet" href="styhle.css">
+</head>
+<body>
+    <div class="container">
+        <button type="submit" class="btn" onclick="Openpop()">submit</button>
+         <div class="pop-up" id="popup">
+            <img src="pngaaa.com-5498074.png" alt="">
+            <h2>Thankyou !</h2>
+            <p>Your Details have been successfully submited the details . Thanks!</p>
+            <button type="ok" onclick="Closepop()">OK</button>
+         </div>
+
+    </div>
+    <script>
+        let popup = document.getElementById("popup");
+
+        function Openpop()
+        {
+            popup.classList.add("open-pop-up");
+        }
+        function Closepop()
+        {
+            popup.classList.remove("open-pop-up");
+        }
+    </script>
+</body>
+</html>
