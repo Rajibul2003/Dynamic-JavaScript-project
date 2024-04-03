@@ -1,0 +1,90 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    background:#fff1e1;
+}
+.box{
+    background:  #1d3c45;
+    color: #fff;
+    width: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 20px 0(0,0,0,0.15);
+}
+.box h2{
+    font-size: 32px;
+    margin-bottom: 40px;
+    position: relative;
+}
+.box h2::after{
+    content: ' ';
+    width: 75px;
+    height: 3px;
+    border-radius: 3px;
+    background: rgba(23,124,229);
+    position: absolute;
+    bottom: -10px;
+    left:50%;
+    transform: translateX(-50%);
+}
+.box blockquote{
+    font-size: 26px;
+    min-height: 112px;
+}
+.box blockquote::before,.box blockquote::after{
+    content: '"';
+}
+.box span{
+    display: block;
+    margin-top: 10px;
+    float: right;
+    position: relative;
+}
+.box span::before{
+    content: " ";
+    width: 20px;
+    height: 2px;
+    background: rgba(23,124,229);
+    position: absolute;
+    top: 50%;
+    left: -30px;
+
+}
+.box div{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.box div button{
+    width: 150px;
+    height: 50px;
+    background: rgba(23,124,229);
+    color: #fff;
+    border-radius: 25px;
+    border: 1px solid rgba(23,124,229);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    cursor: pointer;
+}
+.box div button i{
+    margin: 4px;
+    font-size: 25px;
+}
+.box div button:nth-child(2){
+    background: #fff;
+    color: #333;
+}
