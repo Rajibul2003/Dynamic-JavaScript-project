@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background:linear-gradient(135deg,#375E97, #FB6542, #FFBB00);
+    padding: 10px;
+}
+.todolist{
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding:  15px 30px ;
+    border-radius: 10px;
+
+}
+.todolist img{
+    width: 25px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    background-color: #edeef0;
+    border-radius: 25px;
+}
+input{
+   border: none;
+   outline: none;
+   padding: 12px;
+   background: transparent;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 12px;
+    background:rgb(0, 195, 255); 
+    border-radius: 25px;
+    padding:16px 35px;
+    cursor: pointer;
+    font-size: 16px;
+}
+ul li{
+    list-style-type: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    position: relative;
+}
+ul li:before{
+    content: '';
+    position: absolute;
+    height:28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(imges/unchecked.png);
+    background-size: cover;
+    background-position: center ;
+    top: 8px;
+    left: 8px;
+
+    
+
+}
+ul li.checked{
+   color: #555;
+   text-decoration: line-through; 
+}
+ul li.checked::before{
+  background-image: url("imges/selected.png");
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius:50% ;
+}
+ul li span:hover{
+    background: #edeef0;
+
+}
